@@ -4,15 +4,12 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-//const connect = require('gulp-connect-php');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const clean = require('gulp-clean');
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin')
 const browsersync = require('browser-sync').create();
-
-//const connect = require('gulp-connect-php');
 
 // Use dart-sass for @use
 sass.compiler = require('dart-sass');
@@ -41,7 +38,7 @@ function imageTask() {
 }
 
 function browsersyncServe(cb){
-    // Serve files from the root of this project
+    // Serve files
     browsersync.init({ 
         proxy: 'localhost/php'
    });
